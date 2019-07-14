@@ -29,6 +29,7 @@ const removeRecipe = (id) => {
 const generateRecipeDOM = (recipe) => {
     const recipeEl = document.createElement('a');
     const textEl = document.createElement('p');
+    const ingredientEl = document.createElement('p');
     const statusEl = document.createElement('p');
 
     //Setup the recipe title text
@@ -44,6 +45,11 @@ const generateRecipeDOM = (recipe) => {
     //Setup the link
     recipeEl.setAttribute('href', `/edit.html#${recipe.id}`);
     recipeEl.classList.add('list-item');
+
+    // //setup the ingredient message
+    ingredientEl.textContent = checkIngredients(recipe.ingredients);
+    ingredientEl.classList.add('list-item__subtitle1');
+    recipeEl.appendChild(ingredientEl);
 
     //setup the status message
     statusEl.textContent = generateLastEdited(recipe.updatedAt);
@@ -112,6 +118,11 @@ const renderRecipes = (recipes, filters) => {
         });
     }
 };
+//generate the checkIngredient message
+const checkIngredients = (ingredients) => {
+    console.log(ingredients);
+    return `You have some of the ingredients`;
+}
 
 //generate the last edited message
 const generateLastEdited = (timestamp) => `Last edited: ${moment(timestamp).fromNow()}`;
