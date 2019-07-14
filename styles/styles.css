@@ -198,5 +198,9 @@ a {
 }
 
 .danger {
-    margin-bottom: .4rem;
+    margin: 1rem;
+}
+
+.ingredient {
+    margin: 2rem;
 }

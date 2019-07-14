@@ -50,4 +50,13 @@ window.addEventListener('storage', (e) => {
     bodyElement.value = recipe.body;
     recipe.updatedAt = moment().valueOf();
     updatedElement.textContent = generateLastEdited(recipe.updatedAt);
+});
+
+document.querySelector('new-ingredient').addEventListener('submit', (e) => {
+    const text = e.target.elements.text.value.trim();
+    e.preventDefault();
+
+    if (text.length > 0) {
+
+    }
 })
