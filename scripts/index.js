@@ -17,6 +17,7 @@ document.querySelector('#create-button').addEventListener('click', (e) => {
         id,
         title: '',
         body: '',
+        ingredients: [],
         createdAt: timestamp,
         updatedAt: timestamp
     });
