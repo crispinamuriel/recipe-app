@@ -173,7 +173,16 @@ a {
 
 .list-item__title {
     font-size: 1.8rem;
-    margin-bottom: .4rem
+    margin-bottom: .4rem;
+}
+
+.list-item__subtitle1 {
+    color: rgb(0, 0, 0);
+    font-size: 1.4rem;
+    font-weight: 350;
+    font-style: italic;
+    margin-bottom: .4rem;
+    margin-top: .4rem;
 }
 
 .list-item__subtitle {
@@ -186,4 +195,8 @@ a {
 .empty-message {
     text-align: center;
     margin: 3.2rem 0;
+}
+
+.danger {
+    margin-bottom: .4rem;
 }

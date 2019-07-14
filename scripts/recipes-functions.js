@@ -118,6 +118,7 @@ const renderRecipes = (recipes, filters) => {
         });
     }
 };
+
 //generate the checkIngredient message
 const checkIngredients = (ingredients) => {
     console.log(ingredients);
