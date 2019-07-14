@@ -52,11 +52,17 @@ window.addEventListener('storage', (e) => {
     updatedElement.textContent = generateLastEdited(recipe.updatedAt);
 });
 
-document.querySelector('new-ingredient').addEventListener('submit', (e) => {
+document.querySelector('#new-ingredient').addEventListener('submit', (e) => {
     const text = e.target.elements.text.value.trim();
     e.preventDefault();
 
     if (text.length > 0) {
-
+        recipe.ingredients.push({
+            id: uuidv4(),
+            text,
+            inStock: false
+        });
+        saveRecipes(recipes);
+        e.target.elements.text.value = '';
     }
-})
+});
