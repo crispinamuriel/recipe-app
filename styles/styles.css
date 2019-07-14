@@ -31,6 +31,7 @@ a {
     color: #396684;
 }
 
+
 /* Container */
 
 .container {
@@ -39,10 +40,11 @@ a {
     padding: 0 1.6rem;
 }
 
+
 /* Header */
 
 .header {
-    background: #43799c;
+    background: #9c6e43;
     color: white;
     padding: 1.6rem 0;
 }
@@ -56,6 +58,7 @@ a {
     font-size: 1.6rem;
     font-weight: 300;
 }
+
 
 /* Actions Bar */
 
@@ -77,6 +80,7 @@ a {
 .actions__container--spaced {
     justify-content: space-between
 }
+
 
 /* Form Inputs */
 
@@ -101,9 +105,9 @@ a {
 }
 
 .button {
-    background: #43799c;
+    background: #9c6e43;
     border: none;
-    border-bottom: 2px solid #396684;
+    border-bottom: 2px solid #614429;
     color: white;
     font-size: 1.4rem;
     font-weight: 300;
@@ -112,7 +116,7 @@ a {
 }
 
 .button:hover {
-    background: #396684;
+    background: #ac9146;
 }
 
 .button--secondary {
@@ -123,6 +127,7 @@ a {
 .button--secondary:hover {
     background: #6E6E6E;
 }
+
 
 /* Note editor */
 
@@ -147,6 +152,7 @@ a {
     padding: .8rem;
     width: 100%;
 }
+
 
 /* Note List Item */
 
