@@ -107,7 +107,7 @@ a {
 .button {
     background: #9c6e43;
     border: none;
-    border-bottom: 2px solid #614429;
+    border-bottom: 2px solid #6d4d2f;
     color: white;
     font-size: 1.4rem;
     font-weight: 300;
@@ -116,7 +116,7 @@ a {
 }
 
 .button:hover {
-    background: #ac9146;
+    background: #f19215;
 }
 
 .button--secondary {
