@@ -26,7 +26,7 @@ titleElement.addEventListener('input', (e) => {
 
 bodyElement.addEventListener('input', (e) => {
     recipe.body = e.target.value;
-    recipe.updatedAt = moment.valueOf();
+    recipe.updatedAt = moment().valueOf();
     updatedElement.textContent = generateLastEdited(recipe.updatedAt);
     saveRecipes(recipes);
 });
