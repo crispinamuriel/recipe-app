@@ -63,6 +63,16 @@ document.querySelector('#new-ingredient').addEventListener('submit', (e) => {
             inStock: false
         });
         saveRecipes(recipes);
+        renderIngredients(recipe)
         e.target.elements.text.value = '';
     }
 });
+
+const removeIngredient = (id) => {
+    const ing = recipe.ingredients
+    const ingredientIndex = ing.findIndex((ingredient) => ingredient.id === id);
+
+    if (ingredientIndex > -1) {
+        recipe.ingredients.splice(ingredientIndex, 1);
+    }
+};

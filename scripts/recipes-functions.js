@@ -121,9 +121,16 @@ const renderRecipes = (recipes, filters) => {
 
 //generate the checkIngredient message
 const checkIngredients = (ingredients) => {
-    console.log(ingredients);
     return `You have some of the ingredients`;
 }
 
 //generate the last edited message
 const generateLastEdited = (timestamp) => `Last edited: ${moment(timestamp).fromNow()}`;
+
+const renderIngredients = (recipe) => {
+    recipe.ingredients
+    const ingredientEl = document.querySelector('#ingredients');
+    const one = document.createElement('p');
+    ingredientEl.appendChild(one);
+
+}
