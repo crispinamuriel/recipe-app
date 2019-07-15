@@ -94,6 +94,13 @@ const renderIngredients = (recipe) => {
     }
 }
 
+//toggle the ingredient "in stock" status
+const toggleIngredientStock = (ingredient) => {
+    if (ingredient) {
+        ingredient.inStock = !ingredient.inStock;
+    }
+}
+
 const generateIngredientDOM = (ingredient) => {
     const ingEl = document.createElement('label');
     const containerEl = document.createElement('div');
@@ -106,7 +113,7 @@ const generateIngredientDOM = (ingredient) => {
     checkbox.checked = ingredient.inStock;
     containerEl.appendChild(checkbox);
     checkbox.addEventListener('change', () => {
-        toggleIngredientStock(ingredient.id);
+        toggleIngredientStock(ingredient);
         saveRecipes(recipes);
         renderIngredients(recipe);
     });
