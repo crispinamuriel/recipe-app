@@ -76,3 +76,60 @@ const removeIngredient = (id) => {
         recipe.ingredients.splice(ingredientIndex, 1);
     }
 };
+
+const renderIngredients = (recipe) => {
+    const arrOfIngredients = recipe.ingredients;
+    const ingredientEl = document.querySelector('#ingredients');
+
+    if (arrOfIngredients.length > 0) {
+        ingredientEl.innerHTML = '';
+        arrOfIngredients.forEach((ingredient) => {
+            ingredientEl.appendChild(generateIngredientDOM(ingredient));
+        });
+    } else {
+        const messageEL = document.createElement('p');
+        messageEL.classList.add('empty-message');
+        messageEL.textContent = `Add some ingredients to your recipe!`;
+        ingredientEl.appendChild(messageEL);
+    }
+}
+
+const generateIngredientDOM = (ingredient) => {
+    const ingEl = document.createElement('label');
+    const containerEl = document.createElement('div');
+    const checkbox = document.createElement('input');
+    const ingText = document.createElement('span');
+    const removeButton = document.createElement('button');
+
+    //setup ingredient checkbox
+    checkbox.setAttribute('type', 'checkbox');
+    checkbox.checked = ingredient.inStock;
+    containerEl.appendChild(checkbox);
+    checkbox.addEventListener('change', () => {
+        toggleIngredientStock(ingredient.id);
+        saveRecipes(recipes);
+        renderIngredients(recipe);
+    });
+
+    //setup the ingredient text
+    ingText.textContent = ingredient.text;
+    containerEl.appendChild(ingText);
+
+    //setup container
+    ingEl.classList.add('list-item');
+    containerEl.classList.add('list-item__container');
+    ingEl.appendChild(containerEl);
+
+    //setup the remove button
+    removeButton.textContent = 'remove';
+    removeButton.classList.add('button', 'button--text');
+    ingEl.appendChild(removeButton);
+    removeButton.addEventListener('click', () => {
+        removeIngredient(ingredient.id);
+        saveRecipes(recipes);
+        renderIngredients(recipe);
+    })
+    return ingEl;
+}
+
+renderIngredients(recipe);
