@@ -69,7 +69,7 @@ document.querySelector('#new-ingredient').addEventListener('submit', (e) => {
 });
 
 const removeIngredient = (id) => {
-    const ing = recipe.ingredients
+    const ing = recipe.ingredients;
     const ingredientIndex = ing.findIndex((ingredient) => ingredient.id === id);
 
     if (ingredientIndex > -1) {

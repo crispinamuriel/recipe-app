@@ -122,12 +122,11 @@ const renderRecipes = (recipes, filters) => {
 //generate the checkIngredient message
 const checkIngredients = (ingredients) => {
     const allSame = ingredients.every((val, i, arr) => val.inStock === arr[0].inStock);
-    console.log(allSame);
-    console.log(ingredients.inStock)
-    if (allSame === true || ingredients.inStock === true) {
-        return `You have all of the ingredients!`
-    } else if (allSame === true && ingredients.inStock === false) {
-        return `You do not have any of the ingredients needed.`
+    const stock = ingredients[0].inStock;
+    if (allSame === true && stock === true) {
+        return `You have all of the ingredients!`;
+    } else if (allSame === true && stock === false) {
+        return `You do not have any of the ingredients needed.`;
     } else {
         return `You have some of the ingredients.`;
     }
