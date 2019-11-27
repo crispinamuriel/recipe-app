@@ -1,7 +1,7 @@
 # recipes app
 * Created by Crispina Muriel
 
-[URL to static website](https://happy-davinci-a1798d.netlify.com/)
+[URL to static website](https://muriel-recipe-app.netlify.com)
 
 # Minimum Viable Product
 
