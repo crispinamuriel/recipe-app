@@ -5,7 +5,7 @@
 
 # Minimum Viable Product
 
-My Recipe Application is a simple app, built using Javascript. By the end of development this app will, at a minimum, satisfy the following criteria:
+My Recipe Application is a single page application, built using Vanilla Javascript. By the end of development this app will, at a minimum, satisfy the following criteria:
 
 * New recipe
 * Edit recipe
