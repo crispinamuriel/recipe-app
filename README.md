@@ -1,7 +1,7 @@
 # recipes app
 * Created by Crispina Muriel
 
-[URL to static website](https://muriel-recipe-app.netlify.com)
+[URL to deployed website](https://muriel-recipe-app.netlify.com)
 
 # Minimum Viable Product
 
